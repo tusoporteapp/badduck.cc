@@ -54,10 +54,7 @@
             <div data-reflow-type="product-search" data-reflow-search-url="index.html" data-reflow-show-button="true"></div>
             <div data-reflow-type="product-list" data-reflow-layout="cards" data-reflow-order="date_desc" data-reflow-product-link="p.html?product={id}" data-reflow-show="image,name"></div>
         </section>
-    </main>
-    <nav class="navbar fixed-bottom navbar-light custom-navbar" style="background: rgba(255,255,255,0.5);padding-left: 20px;padding-right: 30px;padding-top: 10px;padding-bottom: 0px;backdrop-filter: blur(6px);">
-        <div class="container"><button class="btn btn-primary" id="shareButton" type="button" style="margin-bottom: 9px;width: 100%;"><i class="icon ion-android-share"></i>&nbsp;Compartir Tienda</button></div>
-    </nav><script>
+    </main><script>
 document.getElementById("shareButton").addEventListener("click", function() {
     // Verificar si el navegador soporta la API de Web Share
     if (navigator.share) {
@@ -81,10 +78,18 @@ document.getElementById("shareButton").addEventListener("click", function() {
     }
 });
 </script>
+    <nav class="navbar fixed-bottom navbar-light custom-navbar" style="background: rgb(255,255,255);padding-left: 20px;padding-right: 30px;padding-top: 10px;padding-bottom: 0px;backdrop-filter: blur(0px);">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary" id="shareButton" type="button" style="margin-bottom: 9px;width: 100%;border-top-right-radius: 0px;border-bottom-right-radius: 1px;"><i class="icon ion-android-share"></i>&nbsp;Compartir</button><button class="btn btn-danger add-button" type="button" style="margin-bottom: 9px;width: 100%;border-bottom-left-radius: 0px;border-top-left-radius: 0px;"><i class="icon ion-ios-download-outline"></i>&nbsp;Instalar</button></div>
+        </div>
+    </nav>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.reflowhq.com/v2/toolkit.min.js" data-reflow-store="1539261737" data-reflow-locale="assets/js/es_Es.json"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/service-worker.js"></script>
+    <script src="assets/js/openmodal.js"></script>
+    <script src="assets/js/potestade.js"></script>
 </body>
 
 </html>
